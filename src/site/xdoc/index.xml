@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+    <properties>
+        <title>Flexmark Library</title>
+        <author>Lutece Team</author>
+        <version>1.0.0</version>
+    </properties>
+    <head>
+     	<meta name="keywords" content="MarkDown,Parser,FlexMark"/>                           
+     </head>  
+    <body>
+        <section name="Introduction">
+            <p>
+                The Flexmark library provides functionalities to parse and render Markdown within the Lutece platform.
+            </p>
+        </section>
+        <section name="Configuration">
+            <p>
+                To configure the Flexmark library, follow these steps:
+            </p>
+            <itemizedlist>
+                <item>Include the library in your project dependencies.</item>
+                <item>Initialize the FlexmarkService in your application.</item>
+            </itemizedlist>
+            <p>
+                Example of injection in an XML context file:
+            </p>
+            <p>
+                &lt;bean id="FlexMarkParser" class="fr.paris.lutece.plugins.flexmark.FlexMarkParser" &gt;
+            </p>
+            <p>
+                &lt;property name="FlexMarkMarkdown" /&gt;
+            </p>
+            <p>
+                &lt;property prefix="MD:" /&gt;
+            </p>
+            <p>
+                &lt;/bean&gt;
+            </p>
+        </section>
+        <section name="Usage">
+            <p>
+                To use the Flexmark library, follow these steps:
+            </p>
+            <itemizedlist>
+                <item>Call the FlexmarkService to parse Markdown content.</item>
+                <item>Specify the Markdown text to be parsed.</item>
+                <item>Set the desired rendering options for the output.</item>
+                <item>Retrieve the rendered HTML content.</item>
+            </itemizedlist>
+            <p>
+            This plugin delivers an implementation of the IRichTextContentParser interface, used by the Lutece RichTextContentService.
+            The content to parse shall begin with the prefix specified in the injection configuration.
+            </p>
+        </section>
+    </body>
+</document>

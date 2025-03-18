@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+    <properties>
+        <title>Bibliothèque Flexmark</title>
+        <author>Équipe Lutece</author>
+        <version>1.0.0</version>
+    </properties>
+    <head>
+     	<meta name="keywords" content="MarkDown,Parser,FlexMark"/>                           
+     </head>  
+    <body>
+        <section name="Introduction">
+            <p>
+                La bibliothèque Flexmark fournit des fonctionnalités pour analyser et rendre le Markdown au sein de la plateforme Lutece.
+            </p>
+        </section>
+        <section name="Configuration">
+            <p>
+                Pour configurer la bibliothèque Flexmark, suivez ces étapes :
+            </p>
+            <itemizedlist>
+                <item>Incluez la bibliothèque dans les dépendances de votre projet.</item>
+                <item>Initialisez le FlexmarkService dans votre application.</item>
+            </itemizedlist>
+            <p>
+                Exemple d'injection dans un fichier de contexte XML :
+            </p>
+            <p>
+                &lt;bean id="FlexMarkParser" class="fr.paris.lutece.plugins.flexmark.FlexMarkParser" &gt;
+            </p>
+            <p>
+                &lt;property name="FlexMarkMarkdown" /&gt;
+            </p>
+            <p>
+                &lt;property prefix="MD:" /&gt;
+            </p>
+            <p>
+                &lt;/bean&gt;
+            </p>
+        </section>
+        <section name="Usage">
+            <p>
+                Pour utiliser la bibliothèque Flexmark, suivez ces étapes :
+            </p>
+            <itemizedlist>
+                <item>Appelez le FlexmarkService pour analyser le contenu Markdown.</item>
+                <item>Spécifiez le texte Markdown à analyser.</item>
+                <item>Définissez les options de rendu souhaitées pour la sortie.</item>
+                <item>Récupérez le contenu HTML rendu.</item>
+            </itemizedlist>
+            <p>
+            Ce plugin fournit une implémentation de l'interface IRichTextContentParser, utilisée par le Lutece RichTextContentService.
+            Le contenu à analyser doit commencer par le préfixe spécifié dans la configuration d'injection.
+            </p>
+        </section>
+    </body>
+</document>
